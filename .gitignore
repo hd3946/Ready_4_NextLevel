@@ -1,2 +1,3 @@
 ﻿apps/server/package-lock.json
 apps/server/dist
+*.lock
