@@ -4,7 +4,7 @@ import uuid from 'react-uuid'
 
 let web3
 let account
-const ERC1155 = "0x2351512098b103289096ED876059b079d0a8D18C"
+const ERC1155 = "0xc5bea2Fe1a076c1Ef82b9e2362879673Df2b205e"
 
 const contractAddress = '0x189B2FDF0ddaBcB95e8B271B8508411020bDbE20'
 
@@ -104,7 +104,7 @@ export async function getAllowance() {
         toBN(String(signatureId)),
         '0x2351512098b103289096ED876059b079d0a8D18C',
         String(account),
-        toBN('10'),
+        toBN('1'),
         toBN('1')
     ]; 
     // console.log('signatureId', toBN(String(signatureId)))
@@ -113,7 +113,7 @@ export async function getAllowance() {
     web3.eth.personal.sign(data, account)
     .then(async res => {
       console.log(res, 'signatureId')
-        const result = await mintWithUriByTokenId(ERC1155, 10, 1, signatureId, res)
+        const result = await mintWithUriByTokenId(ERC1155, 1, 1, signatureId, res)
         console.log('\r\n', result)
       })
     .catch(error => {
