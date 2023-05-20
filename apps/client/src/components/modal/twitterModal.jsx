@@ -4,6 +4,7 @@ import { ModalMission } from "../../states";
 import { useRecoilState } from "recoil";
 import TwitterIcon from '@mui/icons-material/Twitter'; 
 import NearIcon from "@assets/images/icons/Near.png"
+import {getAllowance} from "../../states/web3"
 
 export default function twitterModal() {
   const [twit, setTwit] = React.useState(true);
@@ -16,6 +17,7 @@ export default function twitterModal() {
   const completeMission = () => {
     // NFT 발행
     setOpen(false);
+    getAllowance();
   }
   return (
       <Modal

@@ -17,6 +17,7 @@ import { ChainId, isLoggedInState } from "../../../states";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import NavWrapper from "./Header.style";
 import { UserIcon }  from "./UserIcon"
+import { metaMaskLogin } from "../../../states/web3"
 
 const CHAIN_ID = Number(31337);
 
@@ -39,8 +40,8 @@ const Header = () => {
 
   useEffect(() => {
     if (isConnected) {
-      if (activeConnector) {
-        // setChainId(CHAIN_ID);
+      if (activeConnector) { 
+        metaMaskLogin()
         setLoggedIn(true);
       }
     }  
@@ -65,6 +66,7 @@ const Header = () => {
 
   const handleWalletBtn = (e) => {
     e.preventDefault();
+    metaMaskLogin();
     walletModalHandle();
   };
 
