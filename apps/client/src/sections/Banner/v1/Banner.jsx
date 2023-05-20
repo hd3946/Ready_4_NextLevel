@@ -1,6 +1,6 @@
 import Button from "@components/button";
 import BannerStyleWrapper from "./Banner.style";
-
+import Link from "next/link"
 import bannerIcon from "@assets/images/icons/icon1.png";
 
 const Banner = () => {
@@ -15,15 +15,16 @@ const Banner = () => {
               alt="banner icon"
             />
             <h1 className="banner-title">
-              Metaverse Web 3.0 Gaming Launcepad &amp; IGO
+              Hack the NEAR
             </h1>
             <div className="description">
-              The next generation gaming ecosystem for IGOs and NFT
+              Create without Limits
             </div>
-
+            <Link href="/projects-grid"> 
             <Button href="/projects-grid" variant="mint" md isCenter className="banner-btn">
-              Explore IGO
+              Start
             </Button>
+            </Link>
           </div>
         </div>
       </BannerStyleWrapper>

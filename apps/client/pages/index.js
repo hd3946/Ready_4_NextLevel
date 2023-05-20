@@ -4,13 +4,7 @@ import Layout from "@components/layout";
 import SEO from "@components/SEO";
 import WalletModal from "@components/modal/walletModal/WalletModal";
 import MetamaskModal from "@components/modal/metamaskModal/MetamaskModal";
-import Banner from "@sections/Banner/v1"; 
-import NextProjects from "@sections/Projects/v1";
-import PreviousProjects from "@sections/Projects/v3";
-import Statistics from "@sections/Statistics/v1";
-import Team from "@sections/Team/v1";
-import Partner from "@sections/Partner/v1";
-import Footer from "@sections/Footer/v1";
+import Banner from "@sections/Banner/v1";  
 
 export default function Home() {
   const { walletModalvisibility, metamaskModal } = useModal();
@@ -20,13 +14,7 @@ export default function Home() {
       <Layout>
         {walletModalvisibility && <WalletModal />}
         {metamaskModal && <MetamaskModal />}
-        <Banner /> 
-        <NextProjects />
-        <PreviousProjects />
-        <Statistics />
-        <Team />
-        <Partner />
-        <Footer />
+        <Banner />  
       </Layout>
     </Fragment>
   );
