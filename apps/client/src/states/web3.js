@@ -102,7 +102,7 @@ export async function getAllowance() {
     const message = [
         "mintWithUriByTokenId",
         toBN(String(signatureId)),
-        '0x2351512098b103289096ED876059b079d0a8D18C',
+        '0xc5bea2Fe1a076c1Ef82b9e2362879673Df2b205e',
         String(account),
         toBN('1'),
         toBN('1')
